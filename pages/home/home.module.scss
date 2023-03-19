@@ -2,61 +2,28 @@
 
 .container{
     @include desktop {
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        height: calc(var(--vh)*100);
-        bottom: auto;
-        left: 0;
-        right: auto;
-        top: 0;
+       overflow-y: hidden;
     }
 }
 
 .container__inner{
     @include desktop {
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        height: calc(var(--vh)*100);
-        position: absolute;
-        width: 100%;
-    }
-}
-
-.container__inner__scroll{
-    @include desktop {
-        // width: -webkit-max-content;
-        // width: -moz-max-content;
-        // width: max-content;
         display: flex;
+        align-items: center;
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: relative;
-        height: auto;
+        overflow: hidden;
     }
 }
 
 .hero{
     @include desktop {
-        width: auto;
-        min-width: 100vw;
+        position: relative;
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        height: calc(var(--vh)*100);
-    }
-}
-
-.her{
-    @include desktop {
-       
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        min-width: 100vw;
     }
 }
 
@@ -75,6 +42,25 @@
     font-weight: bold;
     font-style: italic;
     font-display: swap;
+}
+
+.gallery__outer{
+    @include desktop {
+        margin-left: 0rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: black;
+        padding: 0rem 1rem;
+        height: 100vh;
+        // height: calc(var(--vh)*100 - var(--section-pad-y)*2);
+        box-sizing: content-box;
+        // width: calc(var(--vh)/8.1*300);
+        // overflow-y: hidden!important;
+        
+        // top: 0;
+        // left: 110rem;
+    }
 }
 
 .footer_credit{

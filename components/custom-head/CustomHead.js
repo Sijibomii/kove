@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo'
 import NextHead from 'next/head'
 
 // html head component
-export function CustomHead({ title = '', description, image, keywords }) {
+const CustomHead = ({ title = '', description, image, keywords }) => {
 
     return (
     <>
@@ -92,3 +92,5 @@ export function CustomHead({ title = '', description, image, keywords }) {
     )
 
 }
+
+export default CustomHead;

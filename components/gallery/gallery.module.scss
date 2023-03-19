@@ -1,0 +1,64 @@
+@import 'styles/_functions';
+
+.marque__gallery{
+    @include desktop {
+        // padding
+        padding: 0rem 1rem;
+        height: 100vh;
+       
+        // height: calc(var(--vh)*100 - var(--section-pad-y)*2);
+        box-sizing: content-box;
+        width: calc(var(--vh)/8.1*300);
+        overflow-y: hidden!important;
+    }
+}
+
+.marque__gallery__container{
+    @include desktop {
+        display: block;
+        height: 100%;
+        bottom: auto;
+        left: 0;
+        right: auto;
+        top: 0;
+        width: 100%;
+        // overflow-y: hidden;
+    }
+}
+
+.marque__gallery__wrap{
+    @include desktop {
+        width: 100%;
+        height: auto;
+        will-change: transform;
+        margin-top: -7rem;
+    }
+}
+
+.marque__gallery__item{
+    @include desktop {
+        width: 100%;
+        padding-top: 2%;
+        position: relative;
+    }
+}
+
+s.marque__gallery__item__media{
+    @include desktop {
+        height: 100%;
+        position: absolute;
+        bottom: auto;
+        left: 0;
+        right: auto;
+        top: 0;
+        width: 100%;
+    
+    }
+}
+
+.marque__gallery__item__media__image{
+    @include desktop {
+        
+    
+    }
+}

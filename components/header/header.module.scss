@@ -1,0 +1,47 @@
+@import 'styles/_functions';
+
+.header{
+    @include desktop {
+        position: absolute;
+        top: 0;
+        right: 0rem;
+        max-width: 70rem;
+        width: 100vw;
+        padding: 2rem 0rem;
+        visibility: hidden;
+    }
+}
+
+.visible{
+    visibility: visible;
+}
+
+.header__container{
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header__right__list{
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header__right__list__item{
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0rem 1rem;
+
+        h3{
+            margin-right: 0.1rem;
+            font-family: 'Cormorant';
+        }
+    }
+}
