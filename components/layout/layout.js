@@ -38,7 +38,6 @@ const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, 
                 el: document.querySelector('[data-scroll-container]') ?? undefined,
                 smooth: true,
                 direction: 'horizontal',
-                smoothClass: 'none',
                 ...options,
               })
             )
@@ -60,8 +59,8 @@ const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, 
             <Preloader />
             <Cursor />
             {/* <Scrollbar /> */}
-            <main className={s.main} data-scroll-container>{children}</main> 
-            <Footer />
+            <main className={s.main} data-scroll-container>{children}</main>  
+            {/* <Footer /> */}
           </div>
         </>
       )

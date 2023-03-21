@@ -12,6 +12,7 @@
 :root {
   --header-height: #{mobile-vw(58px)};
 
+  
   @include desktop {
     --header-height: #{desktop-vw(98px)};
   }
@@ -40,17 +41,17 @@ body {
   min-height: 100vh;
 }
 
-// custom cursor
-// html.has-custom-cursor {
-//   &,
-//   * {
-//     &,
-//     &::before,
-//     &::after {
-//       cursor: none !important;
-//     }
-//   }
-// }
+custom cursor
+html.has-custom-cursor {
+  &,
+  * {
+    &,
+    &::before,
+    &::after {
+      cursor: none !important;
+    }
+  }
+}
 
 a,
 button,
@@ -84,3 +85,4 @@ svg.icon {
 .intro {
   overflow: hidden;
 }
+// main{display: none!important;}
