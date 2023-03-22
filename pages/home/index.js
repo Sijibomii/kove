@@ -7,6 +7,7 @@ import { useRect } from '@studio-freight/hamo'
 import { useScroll } from '@/hooks/use-scroll'
 import { Title } from '@/components/title'
 import cn from 'clsx'
+import Marquee from 'react-fast-marquee'
 export default function Home() { 
   const headerRectRef = useRef()
   const [ShowHeader, setShowHeader] = useState()
@@ -76,6 +77,66 @@ export default function Home() {
                       <span>col</span>
                     </p>
                     {/* marque */}
+                    <div className={s.marquee}>
+                      <Marquee speed={40}>
+                        <span className={s.marquee__span}>shop collections /</span>
+                        <span className={s.marquee__span}>shop collections /</span>
+                      </Marquee>
+                    </div>
+                  </div>
+                </div>
+
+                {/* display */}
+                <div className={s.display}>
+                  <div className={s.display__container}>
+                    {/* Marquee */}
+                    <div className={s.display__marquee}>
+                      <Marquee speed={80}>
+                        <span className={s.display__marquee__span}>shop collections / 19<sup>o</sup> W</span>
+                        <span className={s.display__marquee__span}>shop collections / 19<sup>o</sup> W</span>
+                      </Marquee>
+                    </div>
+                    
+                    <div className={cn(s.display__media)}>
+                      <figure className={cn(s.display__media__container)}>
+                          <img className={cn(s.display__media__image)} src='https://assets.suitcasemag.com/images/fullscreen/217521-fashion-model-iceland.jpg'/>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+
+                {/* IMAGE SHOWCASE SECTION*/}
+                <div className={s.image__showcase}>
+                  <div className={s.image__showcase__container}>
+                    {/* IMAGE 1 */}
+                    <div className={cn(s.image__showcase__media__1)}>
+                      <figure className={cn(s.image__showcase__media__container)}>
+                          <img className={cn(s.image__showcase__media__image)} src='https://assets.suitcasemag.com/images/block-gallery_x2/217547-winter-clothes-fashion-iceland-989x1280.jpg'/>
+                      </figure>
+                    </div>
+
+                    {/* IMAGE 2 */}
+                    <div className={cn(s.image__showcase__media__2)}>
+                      <figure className={cn(s.image__showcase__media__container)}>
+                          <img className={cn(s.image__showcase__media__image)} src='https://assets.suitcasemag.com/images/fullscreen/217548-winter-style-iceland-989x1280.jpg'/>
+                      </figure>
+                    </div>
+
+                    {/* IMAGE SHOWCASE NAV*/}
+                    <div className={s.image__showcase__nav}>
+                      <div><h3>kove</h3></div>
+                      <div><h3>sourced, designed & made in</h3></div>
+                      <div><h3>2022</h3></div>
+                    </div>
+
+                    <div className={s.image__showcase__title}>
+                      <h2><span>the land</span> <br /> <span>of</span> <br /> <span>fire & ice.</span></h2>
+                    </div>
+
+                    <div className={s.image__showcase__disclaimers} >
+                      <p><span>our materials</span> <span>are 100% sustainable</span> <span>& microplastic free</span> </p>
+                      <p><span>the environment</span><span>comes first</span></p>
+                    </div>
                   </div>
                 </div>
               </div>
