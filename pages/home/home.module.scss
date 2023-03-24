@@ -387,3 +387,17 @@
         }
     }
 }
+
+.vertical{
+    @include desktop{
+       
+    }
+    
+
+}
+
+.vertical__wrapper{
+    @include desktop{
+       
+    }
+}

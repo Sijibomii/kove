@@ -8,6 +8,7 @@ import { useScroll } from '@/hooks/use-scroll'
 import { Title } from '@/components/title'
 import cn from 'clsx'
 import Marquee from 'react-fast-marquee'
+import { Swiper } from '@/components/swiper'
 export default function Home() { 
   const headerRectRef = useRef()
   const [ShowHeader, setShowHeader] = useState()
@@ -139,6 +140,17 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
+                <div className={s.vertical}>
+                  <div className={s.vertical__wrapper}>
+                    {/* vertical scroll section */}
+                    {/* fixed, add new scroll comp but vertical */}
+                    {/* Swiper */}
+                    <Swiper />
+                  </div>
+                  
+                </div>
+                
               </div>
           {/* appear text */}
           </section>
