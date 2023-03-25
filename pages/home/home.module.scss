@@ -9,7 +9,7 @@
 .container__inner{
     @include desktop {
         display: flex;
-        align-items: center;
+        // align-items: center;
         flex-direction: row;
         overflow: hidden;
     }
@@ -390,6 +390,7 @@
 
 .vertical{
     @include desktop{
+       width: 100vw;
        
     }
     
@@ -398,6 +399,6 @@
 
 .vertical__wrapper{
     @include desktop{
-       
+    width: 100%;
     }
 }
