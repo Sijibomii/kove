@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout'
 import { Header } from '@/components/header'
 import { Gallery } from '@/components/gallery'
 import { useEffect, useState, useRef } from 'react'
-import { useRect } from '@studio-freight/hamo'
+import { useStore } from 'lib/store'
 import { useScroll } from '@/hooks/use-scroll'
 import { Title } from '@/components/title'
 import cn from 'clsx'
@@ -13,13 +13,6 @@ export default function Home() {
   const headerRectRef = useRef()
   const [ShowHeader, setShowHeader] = useState()
 
-  // make visible effect smoother
-  // deal with kove text too
-  // show footer
-  // side header too
-
-
-    // get locomotive scroll 
     useScroll((data) => { 
       const left = headerRectRef.current.getBoundingClientRect().left
       setShowHeader(left < 65)
@@ -141,12 +134,17 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={s.vertical}>
-                  <div className={s.vertical__wrapper}>
+                <div className={cn(s.vertical, "sectionPin")}>
+                  <div className={cn(s.vertical__wrapper, "pin-wrap")}>
                     {/* vertical scroll section */}
                     {/* fixed, add new scroll comp but vertical */}
+                    <Marquee speed={80} className={s.vertical__marque__top}>
+                        <span className={s.display__marquee__span}>Drag and Drop to slide ...</span>
+                        <span className={s.display__marquee__span}>Drag and Drop to slide ...</span>
+                    </Marquee>
                     {/* Swiper */}
                     <Swiper />
+                    
                   </div>
                   
                 </div>

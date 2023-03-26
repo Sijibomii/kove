@@ -2,7 +2,7 @@
 
 .container{
     @include desktop {
-       overflow-y: hidden;
+    //    overflow-y: hidden;
     }
 }
 
@@ -11,7 +11,7 @@
         display: flex;
         // align-items: center;
         flex-direction: row;
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
 
@@ -391,7 +391,8 @@
 .vertical{
     @include desktop{
        width: 100vw;
-       
+        
+        // height: 1000rem;
     }
     
 
@@ -400,5 +401,9 @@
 .vertical__wrapper{
     @include desktop{
     width: 100%;
+    padding-bottom: 100rem;
     }
+}
+.vertical__marque__top{
+    background-color: black;
 }
