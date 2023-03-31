@@ -41,53 +41,7 @@ const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, 
               ...options,
             })
               setLocomotive(scroller)
-              scroller.on("scroll", ScrollTrigger.update);
-
-              ScrollTrigger.scrollerProxy(mainRef.current, {
-                // scrollTop(value) {
-                //   return arguments.length ? scroller.scrollTo(value, 0, 0) : scroller.scroll.instance.scroll.x;
-                // },
-                scrollLeft(value){
-                  return arguments.length ? scroller.scrollTo(value, 0, 0) : scroller.scroll.instance.scroll.x;
-                },
-                getBoundingClientRect() {
-                  return {
-                    left: 0,
-                    top: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight
-                  };
-                },
-                pinType: mainRef.current.style.transform ? "transform" : "fixed"
-              });
-
-              window.addEventListener("load", function () {
-                // let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-                let pinWrap = document.querySelector(".pin-wrap");
-                let pinWrapHeight = pinWrap.offsetHeight;
-                let horizontalScrollLength = pinWrapHeight - window.innerHeight;
-                console.log(pinWrapHeight, window.innerHeight)
-                // Pinning and horizontal scrolling
               
-                gsap.to(".pin-wrap", {
-                  scrollTrigger: {
-                    scroller: mainRef.current, //locomotive-scroll
-                    // scrub: true,
-                    trigger: ".sectionPin",
-                    pin: true,
-                    start: "top left",
-                    end: pinWrapHeight,
-                    horizontal: true, 
-                    onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
-                  },
-                  y: -horizontalScrollLength,
-                  ease: "none"
-                });
-              
-                // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-              
-                // ScrollTrigger.refresh();
-              });
 
               } catch (error) {
                 throw Error(`[SmoothScrollProvider]: ${error}`)

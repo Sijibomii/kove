@@ -388,22 +388,321 @@
     }
 }
 
-.vertical{
-    @include desktop{
-       width: 100vw;
-        
-        // height: 1000rem;
+.campaign{
+    @include desktop {
+        height: 100vh;
     }
-    
+}
+
+.campaign__inner{
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat(12, 8.5rem);
+        grid-template-rows: repeat(12,8.33333%);
+        grid-auto-flow: row dense;
+        height: 100%;
+        position: relative;
+    }
+}
+.campaign__image{
+    @include desktop{
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 13;
+        display: grid;
+    }
+}
+.campaign__media{
+    @include desktop{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.campaign__media__container,
+.campaign__media__image{
+    @include desktop{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.campaign__title{
+    @include desktop{
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 12;
+        display: grid;
+        z-index: 3;
+        font-size: 8rem;
+        font-family: 'CormorantInfant-Light';
+        text-transform: uppercase;
+        font-weight: 200;
+        // position: fix;
+        span:nth-of-type(2),
+        span:nth-of-type(3){
+            margin-top: -6rem;
+        }
+
+        span:first-of-type,
+        span:nth-of-type(3){
+            transform: translateX(-7rem);
+        }
+        span:nth-of-type(2){
+            transform: translateX(12.5rem);
+        }
+    }
+}
+
+.campaign__right{
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    display: grid;
+    grid-template-columns: repeat(12, 8.33333%);
+    grid-template-rows: repeat(12,8.33333%);
+}
+
+.campaign__right__footer{
+    @include desktop{
+        display: flex;
+        align-items: center;
+        grid-column-start: 5;
+        grid-column-end: 13;
+        grid-row-start: 11;
+        grid-row-end: 13;
+        margin-left: -1rem;
+        margin-top: 2rem;
+    }
 
 }
 
-.vertical__wrapper{
+.k__22{
+    font-size: 8.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.footer__p{
     @include desktop{
-    width: 100%;
-    padding-bottom: 100rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-top: 2.5rem;
+        margin-left: 1rem;
+        span{
+            display: block;
+        }
     }
 }
-.vertical__marque__top{
-    background-color: black;
+
+.pledge{
+    @include desktop{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+.pledge__heading{
+    @include desktop{
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+}
+
+.pledge__p{
+    @include desktop{
+        width: 30%;
+        font-size: 0.6rem;
+        font-weight: 100;
+        display: inline-block;
+        margin-top: 0.6rem;
+    }
+}
+.planet__do__better{
+    @include desktop{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+.spring__move{
+    @include desktop{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 7;
+        margin-top: 2rem;
+    }
+}
+
+.spring__marquee{
+    @include desktop{
+        margin-top: 2rem;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 0.4rem 0rem;
+    }
+}
+
+.spring__marquee__span{
+    @include desktop{
+       font-size: 1rem;
+       text-transform: uppercase;
+    }
+}
+
+.image__display__div{
+    @include desktop{
+        height: 100vh;
+    }
+}
+
+.image__display__div__inner{
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat(12, 8.5rem);
+        grid-template-rows: repeat(12,8.33333%);
+        grid-auto-flow: row dense;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.image__display__div__marquee{
+    @include desktop{
+        grid-column-start: 1;
+        grid-column-end: 14;
+        grid-row-start: 2;
+        grid-row-end: 10;
+        overflow: hidden;
+
+    }
+}
+.image__display__div__lg__text{
+    font-size: 38rem;
+    font-weight: 200;
+    margin-left: -27rem;
+    margin-right: 40rem;
+}
+
+.image__display__div__1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-top: 2rem;
+}
+
+.image__display__div__1{
+    @include desktop{
+        height: 120%;
+        width: 100%;
+        // position: absolute;
+    }
+}
+
+.image__display__div__1__container,
+.image__display__div__1__image{
+    @include desktop{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.image__display__div__2{
+    grid-column-start: 11;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    margin-top: 1rem;
+}
+
+.image__display__div__2{
+    @include desktop{
+        height: 180%;
+        width: 120%;
+        // position: absolute;
+    }
+}
+
+.image__display__div__2__container,
+.image__display__div__2__image{
+    @include desktop{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.image__display__div__3{
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+.image__display__div__3{
+    @include desktop{
+        height: 150%;
+        width: 60%;
+        // position: absolute;
+    }
+}
+
+.image__display__div__3__container,
+.image__display__div__3__image{
+    @include desktop{
+        height: 100%;
+        width: 100%;
+    }
+}
+.image__display__div__nature{
+    @include desktop{
+        grid-column-start: 9;
+        grid-column-end: 10;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        span{
+            font-weight: 100;
+            display: block;
+        }
+    }
+}
+
+.image__display__div__threads{
+    @include desktop{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 12;
+        grid-row-end: 12;
+        span{
+            font-weight: 100;
+            display: block;
+        }
+    }
+}
+
+.image__display__div__isl{
+    @include desktop{
+        grid-column-start: 9;
+        grid-column-end: 10;
+        grid-row-start: 12;
+        grid-row-end: 11;
+        margin-top: 2rem;
+        span{
+            font-size: 7.5rem;
+            display: block;
+            
+        }
+    }
 }

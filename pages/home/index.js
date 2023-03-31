@@ -134,19 +134,108 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={cn(s.vertical, "sectionPin")}>
-                  <div className={cn(s.vertical__wrapper, "pin-wrap")}>
-                    {/* vertical scroll section */}
-                    {/* fixed, add new scroll comp but vertical */}
-                    <Marquee speed={80} className={s.vertical__marque__top}>
-                        <span className={s.display__marquee__span}>Drag and Drop to slide ...</span>
-                        <span className={s.display__marquee__span}>Drag and Drop to slide ...</span>
-                    </Marquee>
-                    {/* Swiper */}
-                    <Swiper />
-                    
+                <div className={s.campaign}>
+                  <div className={s.campaign__inner}>
+                    <h2 className={s.campaign__title}>
+                      <span>kove</span>
+                      <span>spring</span>
+                      <span>campaign</span>
+                    </h2>
+                    <div className={s.campaign__image}>
+                      {/* image here */}
+                      <div className={cn(s.campaign__media)}>
+                        <figure className={cn(s.campaign__media__container)}>
+                            <img className={cn(s.campaign__media__image)} src='/kove_2.png'/>
+                        </figure>
+                    </div>
+                    </div>
+
+                    <div className={s.campaign__right}>
+                      <div className={s.campaign__right__footer}>
+                        <span className={s.k__22}>/ k-22</span>
+                        <p className={s.footer__p}>
+                          <span>vorlif</span>
+                          <span>outerwear</span>
+                          <span>col</span>
+                        </p>
+                      </div>
+                      <div className={s.pledge}>
+                        <p className={s.pledge__heading}><span>our pledge</span></p>
+                        <p className={s.pledge__p}>
+                          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Praesent imperdiet tellus at massa sollicitudin, at maximus quam sodales. <br /> Donec fermentum erat neque. 
+                          Fusce vel luctus elit. <br />Praesent tempus magna quam, in suscipit urna iaculis at. <br />In congue tincidunt lacus, et varius ante molestie vitae.</span>
+                        </p>
+                      </div>
+                      <div className={s.planet__do__better}>
+                        <p className={s.pledge__heading}><span>do better by our planet</span></p>
+                        <p className={s.pledge__p}><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Praesent imperdiet tellus at massa sollicitudin, at maximus quam sodales. <br /> Donec fermentum erat neque. 
+                          Fusce vel luctus elit. <br />Praesent tempus magna quam, in suscipit urna iaculis at. <br />In congue tincidunt lacus, et varius ante molestie vitae.</span>
+                        </p>
+                      </div>
+                      <div className={s.spring__move}>
+                        <p className={s.pledge__heading}><span>the spring move</span></p>
+                        <p className={s.pledge__p}><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Praesent imperdiet tellus at massa sollicitudin, at maximus quam sodales. <br /> Donec fermentum erat neque. 
+                          Fusce vel luctus elit.</span>
+                        </p>
+                        <div className={s.spring__marquee}>
+                          <Marquee speed={40}>
+                            <span className={s.spring__marquee__span}> lay the film/ play the film. </span>
+                            <span className={s.spring__marquee__span}> lay the film/ play the film. </span>
+                          </Marquee>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  
+                </div>
+
+
+                {/* image display div */}
+                <div className={s.image__display__div}>
+                  <div className={s.image__display__div__inner}>
+                    <div className={s.image__display__div__marquee}>
+                      <Marquee speed={105}>
+                        <div className={s.image__display__div__lg__text}>
+                          <h2><span>19 W 64.</span></h2>
+                        </div>
+                        <div className={s.image__display__div__lg__text}>
+                          <h2><span>19 W 64.</span></h2>
+                        </div>
+                      </Marquee>
+                    </div>
+                    
+                    
+                    {/* images */}
+                    <div className={cn(s.image__display__div__1)}>
+                      <figure className={cn(s.image__display__div__1__container)}>
+                          <img className={cn(s.image__display__div__1__image)} src='https://assets.suitcasemag.com/images/block-gallery_x2/217520-fashion-editorial-in-iceland.jpg'/>
+                      </figure>
+                    </div>
+
+                    <div className={cn(s.image__display__div__2)}>
+                      <figure className={cn(s.image__display__div__2__container)}>
+                          <img className={cn(s.image__display__div__2__image)} src='https://assets.suitcasemag.com/images/block-gallery_x2/217547-winter-clothes-fashion-iceland-989x1280.jpg'/>
+                      </figure>
+                    </div>
+
+                    <div className={cn(s.image__display__div__3)}>
+                      <figure className={cn(s.image__display__div__3__container)}>
+                          <img className={cn(s.image__display__div__3__image)} src='https://assets.suitcasemag.com/images/block-gallery_x2/217526-fashion-shoot-editorial-iceland.jpg'/>
+                      </figure>
+                    </div>
+
+                    <p className={s.image__display__div__nature}>
+                      <span>[22]</span>
+                      <span>Nature is always</span>
+                      <span>in fashion</span>
+                    </p>
+
+                    <p className={s.image__display__div__threads}>
+                      <span>(ISL)</span>
+                      <span>locally & ethically</span>
+                      <span>sourced threads</span>
+                    </p>
+                    <p className={s.image__display__div__isl}><span>ISL/INTL</span></p>
+                  </div>
                 </div>
                 
               </div>
