@@ -15,6 +15,13 @@
     }
 }
 
+.sideheader{
+    position: fixed;
+    width: 4.5rem;
+    height: 100vh;
+    border-right: 1px solid black;
+}
+
 .hero{
     @include desktop {
         position: relative;
@@ -832,6 +839,9 @@
         .footer__column__phone{
             font-weight: 100;
             margin-bottom: .5rem;
+            span{
+                margin-right: .5rem;
+            }
         }
 
         .outlets{

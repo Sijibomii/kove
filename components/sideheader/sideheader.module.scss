@@ -1,0 +1,42 @@
+@import 'styles/_functions';
+
+
+.sideheader__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color .5s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(.76,0,.24,1);
+    // background-color: black;
+    color: black;
+    padding: 2rem 1rem;
+    padding-bottom: 5rem;
+}
+
+.sideheader__middle,
+.sideheader__left,
+.sideheader__right
+{
+    transform: rotate(-90deg);
+}
+
+.sideheader__left{
+    p{
+        font-weight: 100;
+        font-size: 0.8rem;
+        span{
+            display: block;
+        }
+    }
+}
+
+.sideheader__middle{
+    h1{
+        font-size: 2.7rem;
+    }
+}

@@ -8,7 +8,7 @@ import { useScroll } from '@/hooks/use-scroll'
 import { Title } from '@/components/title'
 import cn from 'clsx'
 import Marquee from 'react-fast-marquee'
-import { Swiper } from '@/components/swiper'
+import { SideHeader } from '@/components/sideheader'
 export default function Home() { 
   const headerRectRef = useRef()
   const [ShowHeader, setShowHeader] = useState()
@@ -23,8 +23,11 @@ export default function Home() {
           {/* SECTION PARENT */}
           <section className={cn(s.container)}>
               <div className={s.container__inner}>
-                {/* HEADER */}
-                {/* UNNECESSARY SCROLL ISSUE */}
+                {/* SIDE HEADER */}
+                <div className={s.sideheader}>
+                  <SideHeader />
+                </div>
+
                 {/* HERO */}
                 <div className={cn(s.hero)}>
                   {/* hero text */}
@@ -38,9 +41,9 @@ export default function Home() {
 
                 {/* IMAGE GALLERY */}
                 <div className={s.gallery__outer}>
-                  <Gallery speed={2}/>
-                  <Gallery speed={-2}/>
-                  <Gallery speed={2}/>
+                  <Gallery speed={2} images={['https://assets.suitcasemag.com/images/block-gallery_x2/217535-iceland-fashion-editorial.jpg', 'https://assets.suitcasemag.com/images/block-gallery_x2/217544-suitcase-magazine-fashion-shoot-with-grant-thomas-iceland.jpg', 'https://assets.suitcasemag.com/images/block-gallery_x2/217532-iceland-fashion.jpg']}/>
+                  <Gallery speed={-2} images={['https://assets.suitcasemag.com/images/block-gallery_x2/217520-fashion-editorial-in-iceland.jpg', 'https://assets.suitcasemag.com/images/block-gallery_x2/217514-editorial-shot-in-iceland.jpg', 'https://assets.suitcasemag.com/images/block-gallery_x2/217547-winter-clothes-fashion-iceland-989x1280.jpg']}/>
+                  <Gallery speed={2}images={['https://assets.suitcasemag.com/images/block-gallery_x2/217550-winter-style-iceland-989x1280.jpg', 'https://assets.suitcasemag.com/images/block-gallery_x2/217526-fashion-shoot-editorial-iceland.jpg', 'https://assets.suitcasemag.com/images/block-gallery_x2/217529-iceland-editorial-cover-suitcase-magazine.jpg']}/>
                 </div>
                 
                 {/* showcase */}
