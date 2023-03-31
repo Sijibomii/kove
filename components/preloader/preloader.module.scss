@@ -1,0 +1,50 @@
+@import 'styles/_functions';
+
+.preloader__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+.overlay__top,
+.overlay__bottom{
+    height: 50%;
+    background-color: black;
+    width: 100%;
+}
+
+.preloader{
+    @include desktop{
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.preloader__marquee{
+    @include desktop{
+        // height: 33.333%;
+        height: 50%;
+        width: 100%;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+
+        h1{
+            font-size: 20rem;
+            font-weight: 200;
+            margin-left: 15rem;
+        }
+    }
+}
+
+.white{
+    background-color: white;
+    color: black;
+    display: none!important;
+}

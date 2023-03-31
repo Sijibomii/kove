@@ -1,5 +1,5 @@
 import cn from 'clsx'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { CustomHead } from 'components/custom-head'
 import {Footer}  from 'components/footer'
 import  {Preloader}  from 'components/preloader'
@@ -28,9 +28,13 @@ const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, 
     const mainRef = useRef()
 
     const [locomotive, setLocomotive] = useStore((state) => [state.locomotive, state.setLocomotive])
-
+    // preloaded state if preloaded show main
+    const [preloaded, setPreloaded] = useState(false)
     useEffect(() => {
-      if (!locomotive && typeof window !== "undefined") {
+      // create a set timeout here that sets preloaded to true after 1.5sec
+      }, []) 
+    useEffect(() => {
+      if (!locomotive && typeof window !== "undefined" && preloaded) {
         (async () => {
           try {
             const LocomotiveScroll = (await import('locomotive-scroll')).default
@@ -58,11 +62,9 @@ const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, 
           <CustomHead {...seo} />
           <div className={cn(s.layout, className)}>
             {/* <PageTransition /> */}
-            <Preloader />
+            {!preloaded && <Preloader />}
             <Cursor />
-            {/* <Scrollbar /> */}
-            <main className={s.main} data-scroll-container ref={mainRef}>{children}</main>  
-            {/* <Footer /> */}
+            {preloaded && (<main className={s.main} data-scroll-container ref={mainRef}>{children}</main>  )}
           </div>
         </>
       )
