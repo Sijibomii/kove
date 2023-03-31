@@ -706,3 +706,147 @@
         }
     }
 }
+
+.footer{
+    @include desktop{
+        height: 100vh;
+    }
+}
+
+.footer__inner{
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(12, 11rem);
+        grid-template-rows: repeat(12,8.33333%);
+        grid-auto-flow: row dense;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.footer__image__left{
+    @include desktop{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 13;
+    }
+}
+
+.footer__right{
+    @include desktop{
+        grid-column-start: 4;
+        grid-column-end: 13;
+        grid-row-start: 1;
+        grid-row-end: 13;
+        background-color: black;
+        margin-left: -2rem;
+        padding: 2rem 8rem;
+        padding-top: 4rem;
+        padding-right: 0rem;
+    }
+}
+
+.footer__right__container{
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(12, 8.33333%);
+        grid-template-rows: repeat(12,8.33333%);
+        grid-auto-flow: row dense;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    
+    }
+}
+
+.footer__right__top{
+    @include desktop{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 6rem;
+    }
+}
+
+.say__hello{
+    @include desktop{
+        align-self: flex-start;
+        vertical-align: top;
+        h3{
+            font-size: 4rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            span{
+                display: block;
+            }
+        }
+    }
+}
+
+.footer__column{
+    @include desktop{
+        align-self: flex-start;
+        vertical-align: top;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+}
+
+.footer__column__top{
+    @include desktop{
+        margin-bottom: 2rem;
+        font-weight: 100;
+    }
+}
+
+.footer__column__bottom{
+    @include desktop{
+        h2{
+            font-weight: 100;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .footer__column__description{
+            margin-bottom: 2rem;
+            font-weight: 100;
+            font-size: 0.9rem;
+        }
+        .email__us{
+            display: flex;
+            align-items: center;
+            span{
+                margin-right: .3rem;
+                font-weight: 100;
+            }
+        }
+
+        .footer__column__phone{
+            font-weight: 100;
+            margin-bottom: .5rem;
+        }
+
+        .outlets{
+            font-weight: 100;
+            margin-bottom: .2rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.footer__right__bottom{
+    @include desktop{
+        font-size: 42rem;
+        margin-top: -2rem;
+        color: white;
+        font-weight: 200;
+    }
+}

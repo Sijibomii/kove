@@ -237,6 +237,87 @@ export default function Home() {
                     <p className={s.image__display__div__isl}><span>ISL/INTL</span></p>
                   </div>
                 </div>
+
+
+                {/* footer */}
+                <div className={s.footer}>
+                  <div className={s.footer__inner}>
+                    {/* image */}
+                    <div className={s.footer__image__left}>
+                      <figure className={cn(s.footer__image__left__container)}>
+                        <img className={cn(s.footer__image__left__image)} src='https://assets.suitcasemag.com/images/block-gallery_x2/217544-suitcase-magazine-fashion-shoot-with-grant-thomas-iceland.jpg'/>
+                      </figure>
+                    </div>
+
+                    <div className={s.footer__right}>
+                      <div className={s.footer__right__container} >
+                        <div className={s.footer__right__top}>
+                          <div className={s.say__hello}>
+                            <h3>
+                              <span>/ Say </span>
+                              <span>hello</span>
+                            </h3>
+                          </div>
+
+                          <div className={s.footer__column}>
+                            <div className={s.footer__column__top}>
+                              <p><span>[01]</span></p>
+                            </div>
+                            <div className={s.footer__column__bottom}>
+                              <h2>send us a message</h2>
+                              <p className={s.footer__column__description}>Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit. <br />Etiam ac nisl tincidunt lectus <br />tincidunt rutrum. </p>
+                              <a href='' className={s.email__us}>
+                                <span>Email us</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/> </svg>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div className={s.footer__column}>
+                            <div className={s.footer__column__top}>
+                              <p><span>[02]</span></p>
+                            </div>
+                            <div className={s.footer__column__bottom}>
+                              <h2>give us a call</h2>
+                              <p className={s.footer__column__description}>Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit. <br />Etiam ac nisl tincidunt lectus <br />tincidunt rutrum. </p>
+                              <a href='' className={s.l}>
+                                <div className={s.footer__column__phone}>
+                                  <span>(ISL)</span>
+                                  <span>[+354] 738 7184</span>
+                                </div>
+                                
+                                <div className={s.footer__column__phone}>
+                                  <span>(EU)</span>
+                                  <span>[+39] 06 917 4433</span>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div className={s.footer__column}>
+                            <div className={s.footer__column__top}>
+                              <p><span>[03]</span></p>
+                            </div>
+                            <div className={s.footer__column__bottom}>
+                              <h2>kove hq</h2>
+                              <p className={s.footer__column__description}>Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit. <br />Etiam ac nisl tincidunt lectus <br />tincidunt rutrum. </p>
+                              
+                              <p className={s.outlets}>kove isl</p>
+                              <p className={s.outlets}>skogarlond</p>
+                              <p className={s.outlets}>16705 reykjavik</p>
+                              <p className={s.outlets}>iceland</p>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div className={s.footer__right__bottom}>
+                          <h1>Kove</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
               </div>
           {/* appear text */}
