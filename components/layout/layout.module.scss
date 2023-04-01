@@ -1,0 +1,19 @@
+@import 'styles/_functions';
+
+.disclaimer{
+    @include desktop{
+        display: none;
+    }
+    @include mobile{
+        display: block;
+    }
+}
+
+.body{
+    @include desktop{
+        display: block;
+    }
+    @include mobile{
+        display: none;
+    }
+}

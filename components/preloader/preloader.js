@@ -15,7 +15,6 @@ const Preloader = ({}) => {
     useEffect(() => {
         const h1 = multiRef()
         const overInners = marqueeRef()
-        
         const timeline = GSAP.timeline()
         timeline.set(topBlackRef.current, {
             height: "50%"

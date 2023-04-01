@@ -1,9 +1,7 @@
 import cn from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import { CustomHead } from 'components/custom-head'
-import {Footer}  from 'components/footer'
 import  {Preloader}  from 'components/preloader'
-// import { Scrollbar } from 'components/scrollbar'
 import { useStore } from 'lib/store'
 import dynamic from 'next/dynamic'
 import { gsap } from 'gsap'
@@ -18,23 +16,32 @@ const Cursor = dynamic(
     { ssr: false }
   )
 
-// if(typeof window !== undefined){
- 
-// }
-
-
 const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, children, className, options ={} }) => {
 
     const mainRef = useRef()
-
+    const preloader = useRef()
     const [locomotive, setLocomotive] = useStore((state) => [state.locomotive, state.setLocomotive])
+   
     // preloaded state if preloaded show main
     const [preloaded, setPreloaded] = useState(false)
     useEffect(() => {
-      // create a set timeout here that sets preloaded to true after 1.5sec
+      setTimeout(()=>{
+        // use gsap to change opacity
+        const timeline = gsap.timeline()
+
+        timeline.to(preloader.current, {
+          opacity: 0,
+          display: "none",
+          duration: 1
+        })
+         // timeline.to(mainRef.current,)
+        timeline.call(()=>{
+          setPreloaded(true)
+        })
+      }, 5000)
       }, []) 
     useEffect(() => {
-      if (!locomotive && typeof window !== "undefined" && preloaded) {
+      if (!locomotive && typeof window !== "undefined") {
         (async () => {
           try {
             const LocomotiveScroll = (await import('locomotive-scroll')).default
@@ -58,15 +65,24 @@ const Layout = ({seo = { title: '', description: '', image: '', keywords: '' }, 
       }, [locomotive]) 
 
     return ( 
-        <>
-          <CustomHead {...seo} />
-          <div className={cn(s.layout, className)}>
-            {/* <PageTransition /> */}
-            {!preloaded && <Preloader />}
-            <Cursor />
-            {preloaded && (<main className={s.main} data-scroll-container ref={mainRef}>{children}</main>  )}
+        <div className={s.t}>
+          <div className={s.disclaimer}>
+            <h2>This page was implemented just for large screens!</h2>
           </div>
-        </>
+          <div className={s.body}>
+            <CustomHead {...seo} />
+              <div className={cn(s.layout, className)}>
+                {/* <PageTransition /> */}
+                {!preloaded && <Preloader ref={preloader}/>}
+                <Cursor />
+                <main className={s.main} data-scroll-container ref={mainRef}>
+                  {children}
+                </main>  
+              </div>
+          </div>
+          
+          
+        </div>
       )
 }
 

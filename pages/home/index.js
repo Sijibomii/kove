@@ -9,6 +9,7 @@ import { Title } from '@/components/title'
 import cn from 'clsx'
 import Marquee from 'react-fast-marquee'
 import { SideHeader } from '@/components/sideheader'
+
 export default function Home() { 
   const headerRectRef = useRef()
   const [ShowHeader, setShowHeader] = useState()
@@ -19,8 +20,10 @@ export default function Home() {
     })
 
     return( 
-       <Layout seo={{title: '', description:''}}>
+     
+        <Layout seo={{title: '', description:''}}>
           {/* SECTION PARENT */}
+          
           <section className={cn(s.container)}>
               <div className={s.container__inner}>
                 {/* SIDE HEADER */}
@@ -326,7 +329,7 @@ export default function Home() {
           {/* appear text */}
           </section>
        </Layout>
-
+     
     )
 }
 
